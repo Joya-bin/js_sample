@@ -1,0 +1,3 @@
+
+riot.mount('riot-tabs');
+

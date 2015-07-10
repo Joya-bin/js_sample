@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "jquery": "1.11.3",
-    "html5shiv": "*"
+    "html5shiv": "*",
+    "riot": "2.2.2-beta"
   }
 }

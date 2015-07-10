@@ -15,7 +15,7 @@ var config = {
             main : ['%src%/less/main.less']
         },
         js : {
-            plugins : [],
+            plugins : ['%bower_dir%/riot/riot.js'],
             main : ['%src%/js/main.js']
         },
         js_folders : {
@@ -74,7 +74,8 @@ var _               = require('lodash')
     size            = require('gulp-filesize')
     sourcemaps      = require('gulp-sourcemaps')
     watch           = require('gulp-watch')
-    uglify          = require('gulp-uglify');
+    uglify          = require('gulp-uglify')
+    riot           = require('gulp-riot');
 // end load modules
 
 
@@ -175,7 +176,7 @@ function handleJS() {
         items = smrtr(items, config);
 
         for (var i = 0; i < items.length; i++) {
-            items[ i ] = items[ i ].replace('%src%', config.src)
+            items[ i ] = items[ i ].replace('%src%', config.src).replace('%bower_dir%', config.bower_dir)
         }
 
         // concat
@@ -185,6 +186,12 @@ function handleJS() {
             .pipe(concat( name + '.js'))
             .pipe(gulp.dest(config.dist + '/js/'))
             .on('error', swallowErrors);
+
+        // riot (compile tags)
+        console.log( config.src + '/js/app/views/tabs.tag' );
+        gulp.src(config.src + '/js/app/views/tabs.tag')
+            .pipe(riot())
+            .pipe(gulp.dest(config.dist + '/js/tags/'));
 
         // minify
         gulp.src(config.dist + '/js/'+name+'.js')
