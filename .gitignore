@@ -43,7 +43,6 @@ sftp-config.json
 .idea/
 /vendor/*
 
-dist
 bower_components
 node_modules
 npm-debug.log
