@@ -1,0 +1,30 @@
+{
+  "name": "JSample",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Joachim Corbay",
+    "email": "joachim@piragna.be",
+    "url": "http://www.piragna.be"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-browserify": "0.5.1",
+    "gulp-concat": "2.6.0",
+    "gulp-connect": "2.2.0",
+    "gulp-expect-file": "0.0.7",
+    "gulp-filesize": "0.0.6",
+    "gulp-if": "1.2.5",
+    "gulp-imagemin": "2.3.0",
+    "gulp-include": "2.0.1",
+    "gulp-less": "3.0.3",
+    "gulp-notify": "2.2.0",
+    "gulp-rename": "1.2.2",
+    "gulp-riot": "0.2.16",
+    "gulp-sourcemaps": "1.5.2",
+    "gulp-uglify": "1.2.0",
+    "gulp-util": "3.0.6",
+    "gulp-watch": "4.2.4",
+    "lodash": "3.4.0"
+  }
+}
